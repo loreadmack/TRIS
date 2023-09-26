@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/task.js" defer></script>
+    <title>Practise1</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Работу выполнил Куташевский Сергей</h1>
+        <div id="task1" class="task">
+            <h2 class="header">Задание 1</h2>
+            <p class="TheTask">Написать скрипт калькулятора, 
+                который будет рассчитывать стоимость обоев или краски для ремонта в 
+                комнате.</p>
+
+            <input type="number" id="RLength" placeholder="Введите длинну комнаты в метрах">
+            <input type="number" id="RWidth" placeholder="Введите ширину комнаты в метрах">
+            <input type="number" id="RHeigh" placeholder="Введите ширину комнаты в метрах">
+            <fieldset id="radio">
+                <legend>Выберите вид ремонта:</legend>
+                  <input type="radio" id="Paint" name="drone" value="Paint"/>
+                  <label for="Paint">Покраска стен</label>
+                  <input type="radio" id="Glue" name="drone" value="Glue"/>
+                  <label for="Glue">Поклейка обоев</label>
+            </fieldset>
+            <div class="Type TypeGlue hidden">
+                <input type="number" id="WPWidth" placeholder="Введите длинну обоев в метрах">
+                <input type="number" id="WPHeigh" placeholder="Введите ширину обоев в метрах">
+                <input type="number" id="WPPrice" placeholder="Введите цену одного квадратного метра">
+            </div>
+            <div class="Type TypePaint hidden">
+                <input type="number" id="Cons" placeholder="Введите расход краски на метр квадратный">
+                <input type="number" id="PPrice" placeholder="Введите цену одного литра краски">
+            </div>
+            <button class="math">Рассчитать</button>
+            
+        </div>
+        <div id="task2" class="task">
+            <h2 class="header">Задание 2</h2>
+            <p class="TheTask">Автомобиль едет по дороге с автоматической фиксацией превышения
+                 скорости, необходимо получить с клавиатуры значение скорости и вывести 
+                 сообщение соответствующего наказания.</p>
+            <input type="number" placeholder="Введите скорость автомобиля" id="Speed">
+            <button id="CheckPunishment">Проверить</button>
+        </div>
+        <div id="task3" class="task">
+            <h2 class="header">Задание 3</h2>
+            <p class="TheTask">Студенты сдают зачет, необходимо ввести количество студентов и в 
+                зависимости от количества подтягиваний получить оценку, так же вывести 
+                максимальное и минимальное количество подтягиваний</p>
+            <input type="number" placeholder="Введите количество студентов" id="Student">
+            <button id="Generate">Сгенерировать и рассчитать</button>
+            <textarea name="StudentList" id="StudentList" cols="auto" rows="10" readonly></textarea>
+            <input type="text" id="BetterStudent" placeholder="Максимальное количество подтягиваний">
+            <input type="text" id="BaddestStudent" placeholder="Минимальное количество подтягиваний">
+            <button id="Clear">Очистить поля</button>
+        </div>
+        <div id="task4" class="task">
+            <h2 class="header">Задание 4</h2>
+            <p class="TheTask">Функция, которая возвращает самое длинное слово в предложении.</p>
+            <input type="text" placeholder="Введите текст" id="CommonText">
+            <button id="FindWord">Найти самое длинное слово</button>
+            <input type="text" id="LongestWord" placeholder="Самое длинное слово">
+        </div>
+        <div id="task5" class="task">
+            <h2 class="header">Задание 5</h2>
+            <p class="TheTask">Необходимо реализовть простой валидатор пароля (Длинна максимальная и минимальная, латинские символы верхнего и нижнего регистра, цифры и спец. символы)</p>
+            <label for="">Введите пароль (для просмотра содержимого наведите курсор на поле ввода)</label>
+            <input type="password" id="password" placeholder="Введите пароль" autocomplete="off">
+            <p class="warning hidden" id="LowerIn">Необходима хотя бы 1 латинская буква нижнего регистра</p>
+            <p class="warning hidden" id="UpperIn">Необходима хотя бы 1 латинская буква верхнего регистра</p>
+            <p class="warning hidden" id="DigitalIn">Необходима хотя бы одна цифра</p>
+            <p class="warning hidden" id="SymbolIn">Необходим хотя бы один спец. символ</p>
+            <p class="warning hidden" id="MoreThan">Минимальная длинна пароля 6 символов</p>
+            <p class="warning hidden" id="LessThan">Максимальная длинна пароля 12 символов</p>
+            <p class="ok hidden" id="ok">Пароль подходит</p>
+            <button id="validate">Валидировать</button>
+        </div>
+    </div>
+</body>
+</html>
