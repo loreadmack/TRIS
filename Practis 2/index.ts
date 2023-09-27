@@ -100,3 +100,15 @@ let Sasha = new Passanger('Саша', 19)
 let Sergey = new Passanger('Сергей', 22)
 let Gray = new Passanger('Грэй', 35)
 let Mike = new Passanger('Майк', 15)
+
+TaxiJeka.addPassanger(Jone, Sasha)
+TaxiJeka.trip(10) // 10км по 40 рублей за километр = 400 рубле, всего 2 пассажира, значит стоимость будет разделена на два и каждый пассажир будет должен по 200р
+Jone.getTotalPrice() // 200р
+Sasha.getTotalPrice() // 200р
+
+
+TaxiJeka.addPassanger(Sergey, Gray, Mike)
+TaxiJeka.trip(20) //20км по 40 рублей за километр = 800 рубле, всего 3 пассажира, значит стоимость будет разделена на три и каждый пассажир будет должен по 267р
+Sergey.getTotalPrice() // 200р
+Gray.getTotalPrice() // 200р
+Mike.getTotalPrice() // 200р
