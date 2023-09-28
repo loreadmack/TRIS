@@ -50,7 +50,7 @@ class Taxi {
     private totalPrice(TripLength: number){
         let totalPrice: number = TripLength * this._price / this._passangerList.length
         this._passangerList.forEach((Pass: Passanger) => {
-            Pass.setTotalPrice(totalPrice)
+            Pass.setTotalPrice(Math.round(totalPrice))
         })
     }
 
@@ -103,12 +103,18 @@ let Mike = new Passanger('Майк', 15)
 
 TaxiJeka.addPassanger(Jone, Sasha)
 TaxiJeka.trip(10) // 10км по 40 рублей за километр = 400 рублей, всего 2 пассажира, значит стоимость будет разделена на два и каждый пассажир будет должен по 200р
-Jone.getTotalPrice() // 200р
-Sasha.getTotalPrice() // 200р
+console.log('Джон должен - ', Jone.getTotalPrice()) // 200р
+console.log('Саша должен - ', Sasha.getTotalPrice())// 200р
 
 
 TaxiJeka.addPassanger(Sergey, Gray, Mike)
 TaxiJeka.trip(20) //20км по 40 рублей за километр = 800 рублей, всего 3 пассажира, значит стоимость будет разделена на три и каждый пассажир будет должен по 267р
-Sergey.getTotalPrice() // 200р
-Gray.getTotalPrice() // 200р
-Mike.getTotalPrice() // 200р
+console.log('Сергей должен - ', Sergey.getTotalPrice())// 267р
+console.log('Грэй должен - ', Gray.getTotalPrice())// 267р
+console.log('Майк должен - ', Mike.getTotalPrice())// 267р
+
+
+
+
+ 
+
